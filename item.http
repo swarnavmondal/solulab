@@ -1,0 +1,67 @@
+### Variables
+@server = http://localhost:7000
+
+### --------starting of Product- create, view and update.-----------
+
+### Product Create
+POST {{server}}/product
+Content-Type: application/json
+
+{
+
+"catagoryId":"611890316d6e6625b094fafb",
+   "productName":"green",
+    "qtyPerUnit":"d",
+    "unitPrice":"1",
+    "unitInStock":"2",
+    "discontinued":"true"
+    
+}
+
+### All Product View
+GET {{server}}/product
+Content-Type: application/json
+
+### Single Product View by ID
+GET {{server}}/product/6117459401a186216433357a
+Content-Type: application/json
+
+
+
+### Single product Update by ID
+PATCH {{server}}/product/61174cb1847a9d06cceed2e0
+Content-Type: application/json
+
+{  
+   "productName":"orange"
+}
+
+### Single Product Delete by ID
+DELETE {{server}}/product/61174cb1847a9d06cceed2e0
+Content-Type: application/json
+
+
+
+
+
+### -----End here----
+
+###------------ Catagory Details------
+
+### catagory Create
+
+
+POST {{server}}/catagory
+Content-Type: application/json
+
+{
+
+
+   "categoryName":"Fruit"
+   
+}
+
+
+### All Catagory View
+GET {{server}}/catagory
+Content-Type: application/json
